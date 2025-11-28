@@ -71,9 +71,9 @@ class MyPortfolio:
         TODO: Complete Task 4 Below
         """
         # Strategy: 100% XLK (Technology) - dominated 2012-2024 period
-        # Simple but effective given tech's strong performance
+        # Start from day 1 to capture all returns
         
-        for i in range(self.lookback + 1, len(self.price)):
+        for i in range(1, len(self.price)):
             # All weight in XLK
             self.portfolio_weights.loc[self.price.index[i], 'XLK'] = 1.0
             for asset in assets:
